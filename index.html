@@ -4,14 +4,47 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <title>replit</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-	
-  <script src="script.js"></script>
 
+	<div id="headerBg"></div>
+	<div id="header">
+		<div style="text-align: center;">
+			<h1 style="color: white;">Jeremy Rating</h1>
+			<input id="searchBar" placeholder="Search..." oninput="onSearchInput()">
+			<div id="searchPredictions"></div>
+		</div>
+	</div>
+
+	<a id="results">
+		<div id="body">
+			<div id="bodyInner">
+				<div id="mediaTitle" style="display:flex;justify-content:center;font-weight:bold;font-size:36px;">Search for media above</div>
+				<div id="scoreDisplay" style="margin-top: 15vh;margin-bottom: 15vh;">
+					<div id="scoreDisplayLabel">JEREMY SCORE</div>
+					<div id="scoreDisplayData">0.0</div>
+				</div>
+				<div id="explaination" style="display:flex;justify-content:center;align-items:center;margin-left:10px;margin-right:10px;">
+					<img src="assets/infoIcon.svg" style="height: 20px;margin-right:10px;-webkit-user-select:none;-ms-user-select:none;user-select:none;" draggable="false"></img>
+					<span style="width: 70vw;max-width:700px;">The Jeremy Scoring System (JSS) is an innovative media rating system which collects, reads, and presents reliable data. The Jeremy Score is calculated with the following formula, where J = number of Jeremys in the credits and T = total number of names in the credits: (J ÷ T) × 10000.</span>
+					
+				</div>
+			</div>
+		</div>
+	</a>
+
+	<div id="footer">
+		<img style="height:50px;margin-right:20px;" src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_1-5bdc75aaebeb75dc7ae79426ddd9be3b2be1e342510f8202baf6bffa71d7f5c4.svg">
+		<span style="color:white;font-weight:500;">This product uses the TMDB API but is not endorsed or certified by TMDB.</span>
+	</div>
+	
+	<script src="https://inorganik.github.io/countUp.js/dist/countUp.umd.js"></script>
+	<script type="text/javascript" src="themoviedb.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
